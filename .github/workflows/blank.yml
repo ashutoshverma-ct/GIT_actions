@@ -4,5 +4,4 @@ steps:
  - with:
     python-version: '3.x'
     architecture: 'x64'
-    token: ${{ github.token }}
 - run: test_GIT_Actions.ipynb
