@@ -1,4 +1,4 @@
-- name: Update sample text file
+- name: blank
   uses: actions/setup-python@v2
   with:
     python-version: # optional, default is 3.x
