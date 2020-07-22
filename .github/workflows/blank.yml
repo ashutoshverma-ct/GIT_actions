@@ -1,7 +1,12 @@
-steps:
- - uses: actions/setup-python@v2
- - runs-on: ubuntu-latest
- - with:
-    python-version: '3.x'
-    architecture: 'x64'
-- run: test_GIT_Actions.ipynb
+name: blank
+on: [schedule]
+jobs: 
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - name: file update
+     uses: actios/setup-python@v2
+     with:
+      python-version: '3.x'
+   - run: python GIT_Actions.ipynb
+     
