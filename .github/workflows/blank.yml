@@ -1,14 +1,13 @@
-name: blank
-on: 
+on:
  schedule:
-  - cron: "* * * * *"
-jobs: 
- build:
-  runs-on: windows-latest
-  steps:
-   - name: file update
-     uses: actios/setup-python@v2
-     with:
-      python-version: '3.x'
-   - run: python test_GIT_Actions.ipynb
-     
+  - cron: '* * * *'
+jobs:
+  publish:
+    name: publish
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+        run: python test_GIT_Actions.ipynb
