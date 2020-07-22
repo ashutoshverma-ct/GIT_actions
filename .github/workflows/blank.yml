@@ -10,5 +10,5 @@ jobs:
      uses: actios/setup-python@v2
      with:
       python-version: '3.x'
-   - run: python GIT_Actions.ipynb
+   - run: python test_GIT_Actions.ipynb
      
